@@ -9,3 +9,90 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+
+.sparks {
+  opacity: 0;
+}
+
+.core {
+  fill: transparent;
+  transition: fill .3s ease;
+}
+
+.main-body {
+  fill: transparent;
+  transition: fill .3s ease .05s;
+}
+
+.contour {
+  transition: fill .3s ease .06s;
+}
+
+.like-icon:hover .core {
+  fill: var(--heart-hover-black);
+}
+
+.like-icon:hover .main-body {
+  fill: var(--heart-hover-black);
+}
+
+.like-icon:not(:hover) .core {
+  transition-delay: .03s;
+}
+
+.like-icon:active .core {
+  fill: var(--heart-color-red);
+}
+
+.like-icon:active .main-body {
+  fill: var(--heart-color-red);
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--heart-color-red);
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--heart-color-red);
+}
+
+.like-icon.is-liked .core {
+  fill: var(--heart-color-red);
+}
+
+.like-icon.is-liked .heart {
+  animation: cliked-like .1s .3s 1 ease-in;
+}
+
+.like-icon.is-liked .sparks {
+  animation: cliked-like-sparks .3s .3s 1 ease-in;
+}
+
+.like-icon:not(.is-liked) .contour {
+  transition: fill .1s;
+}
+
+
+@keyframes cliked-like {
+
+    0% {
+      transform: scale(1);
+    }
+  
+    100% {
+      transform: scale(1.25);
+    }
+  
+  }
+  
+  @keyframes cliked-like-sparks {
+  
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  
+  }
