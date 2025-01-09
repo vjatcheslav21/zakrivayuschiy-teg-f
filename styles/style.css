@@ -82,7 +82,7 @@
 
 .card__picture-img {
   display: block;
-  inline-size: var(--content-inline-size);
+  inline-size: var(--card-inline-size);
 }
 
 .card__picture-img-filter-blur {
@@ -120,8 +120,8 @@
 .card__label {
   position: absolute;
   z-index: 1;
-  top: 25px;
-  right: 25px;
+  top: clamp(1.4375rem, 1.3935rem + 0.1878vw, 1.5625rem);
+  right: clamp(0.6875rem, 0.3794rem + 1.3146vw, 1.5625rem);
   font-family: var(--accent-font);
   font-size: 14px;
   text-shadow:
@@ -186,12 +186,12 @@
   position: absolute;
   inset: 0;
   background-color: #000;
-  transition: translate 0.5s ease-in-out 0s;
-  translate: -100%;
+  transition: transform 0.5s ease-in-out 0s;
+  transform: translate(-100%);
 }
 
 .button:hover::after {
-  translate: 0;
+  transform: translate(0);
 }
 
 .card__buttons-wrapper {
@@ -271,7 +271,7 @@
 .dialog__title {
   font-family: var(--accent-font);
   font-size: 14px;
-  max-inline-size: 234px;
+  inline-size: clamp(12.375rem, 11.5827rem + 3.3803vw, 14.625rem);
   text-transform: uppercase;
 }
 
@@ -287,11 +287,6 @@
 
 @media (width <= 375px) {
 
-  .card__label {
-    top: 22px;
-    right: 12px;
-  }
-
   .button__save {
     flex-direction: column;
     min-inline-size: 305px;
@@ -304,10 +299,6 @@
 
   .dialog {
     min-inline-size: 341px;
-  }
-
-  .dialog__title {
-    max-inline-size: 198px;
   }
 
   .dialog__button {

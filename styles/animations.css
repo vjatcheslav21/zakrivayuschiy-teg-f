@@ -65,7 +65,7 @@
 
 .like-icon.is-liked .heart {
   transform-origin: center;
-  animation: ease-in alternate 0.3s 0.1s cliked-like;
+  animation: 1 ease-in alternate 0.3s 0.1s cliked-like;
 }
 
 .like-icon.is-liked .sparks {

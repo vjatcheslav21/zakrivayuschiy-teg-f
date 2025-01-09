@@ -19,6 +19,7 @@
     --button-border: var(--main-border);
     --content-inline-size: clamp(23.4375rem, 16.3732rem + 30.1408vw, 43.5rem);
     --header-block-size: clamp(20.4375rem, 19.5352rem + 3.8498vw, 23rem);
+    --card-inline-size: clamp(23.1875rem, 16.0352rem + 30.5164vw, 43.5rem);;
     --label-shadow-color: #000;
     --dialog-bg-color: #fff;
     --heart-counter-color: #000;
